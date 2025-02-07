@@ -4,10 +4,6 @@ This repository contains scripts for personalizing your Bash shell environment i
 
 ## Features
 
-- **Modular Customizations:**  
-  Organize your Bash custom scripts (aliases, functions, prompt modifications, etc.) in one folder.
-- **Automatic Sourcing:**  
-  An `init.sh` file sources all scripts in the directory automatically during shell startup.
 - **Git Prompt Integration:**  
   Easily integrate Git branch information into your Bash prompt alongside the native Debian 12 color scheme.
 
