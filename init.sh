@@ -8,3 +8,6 @@ SCRIPT_DIR=$(dirname "$0")
 
 # Adding found git branch
 . $SCRIPT_DIR/git.sh
+
+# Modifying prompt PS1
+. $SCRIPT_DIR/prompt.sh
