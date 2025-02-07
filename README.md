@@ -20,10 +20,8 @@ Follow these steps to set up your customizations:
    The `.bash_mods` directory must be created in your home directory, otherwise you must change the variable MODS that indicate where the repo shell files are.
    If you have not yet cloned this repository, run:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git ~/.bash_mods
+   git clone https://github.com/VCOliver/Bash-customizations.git ~/.bash_mods
    ```
-
-   Replace yourusername/yourrepository with the appropriate GitHub repository details.
 
 Alternatively, if you're starting from scratch:
     ```bash
