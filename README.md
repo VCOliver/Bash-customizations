@@ -50,3 +50,8 @@ Alternatively, if you're starting from scratch:
     source .bashrc
     ```
 
+## Third-Party Dependencies
+
+- **Icons in Terminal** by [sebastiencs](https://github.com/sebastiencs/icons-in-terminal)  
+  This project uses icons from the [Icons in Terminal](https://github.com/sebastiencs/icons-in-terminal) repository.
+
