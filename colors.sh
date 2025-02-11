@@ -115,8 +115,9 @@ get_color() {
 }
 
 # Export the functions so they are available in subshells, if needed.
+export -f get_truecolor
+export -f get_256color
 export -f supports_truecolor
-export -f index_to_rgb
 export -f get_color
 
 # -----------------------------------------------------------------------------
@@ -124,7 +125,7 @@ export -f get_color
 # -----------------------------------------------------------------------------
 
 # Reset sequence to clear all attributes.
-export RESET="\e[0m"
+export COLOR_RESET="\e[00m"
 
 # Basic text formatting variables.
 export BOLD="\e[1m"
@@ -134,30 +135,24 @@ export BLINK="\e[5m"
 export REVERSE="\e[7m"
 export HIDDEN="\e[8m"
 
-declare -rA FG_COLORS=(
-    [black]=$($get_color 0 0 0)
-    [red]=$($get_color 255 0 0)
-    [green]=$($get_color 0 255 0)
-    [yellow]=$($get_color 255 255 0)
-    [blue]=$($get_color 0 0 255)
-    [magenta]=$($get_color 255 0 255)
-    [cyan]=$($get_color 0 255 255)
-    [white]=$($get_color 255 255 255)
-    [gray]=$($get_color 128 128 128)
-    [orange]=$($get_color 255 165 0)
-    [purple]=$($get_color 128 0 128)
-)
+# Basic colors
+export FG_BLACK=$(get_color fg 0 0 0)
+export FG_RED=$(get_color fg 255 0 0)
+export FG_GREEN=$(get_color fg 0 255 0)
+export FG_YELLOW=$(get_color fg 255 255 0)
+export FG_BLUE=$(get_color fg 0 0 255)
+export FG_MAGENTA=$(get_color fg 255 0 255)
+export FG_CYAN=$(get_color fg 0 255 255)
+export FG_WHITE=$(get_color fg 255 255 255)
+export FG_GREY=$(get_color fg 128 128 128)
 
-declare -rA BG_COLORS=(
-    [black]=$($get_color 0 0 0)
-    [red]=$($get_color 255 0 0)
-    [green]=$($get_color 0 255 0)
-    [yellow]=$($get_color 255 255 0)
-    [blue]=$($get_color 0 0 255)
-    [magenta]=$($get_color 255 0 255)
-    [cyan]=$($get_color 0 255 255)
-    [white]=$($get_color 255 255 255)
-    [gray]=$($get_color 128 128 128)
-    [orange]=$($get_color 255 165 0)
-    [purple]=$($get_color 128 0 128)
-)
+# Basic colors
+export BG_BLACK=$(get_color bg 0 0 0)
+export BG_RED=$(get_color bg 255 0 0)
+export BG_GREEN=$(get_color bg 0 255 0)
+export BG_YELLOW=$(get_color bg 255 255 0)
+export BG_BLUE=$(get_color bg 0 0 255)
+export BG_MAGENTA=$(get_color bg 255 0 255)
+export BG_CYAN=$(get_color bg 0 255 255)
+export BG_WHITE=$(get_color bg 255 255 255)
+export BG_GREY=$(get_color bg 128 128 128)
