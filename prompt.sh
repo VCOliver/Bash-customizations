@@ -15,7 +15,7 @@ set_prompt(){
     PS1+="\[${USER_COLOR}\]\u\[${COLOR_RESET}\] @"
     PS1+="\[${CWD_COLOR}\]\W\[${COLOR_RESET}\] "
     PS1+="\[${GIT_BRANCH}\]"
-    PS1+=" -> "
+    PS1+="-> "
 
     export PS1
 }
